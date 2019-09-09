@@ -165,7 +165,7 @@ class Clockworkgeek_Extrarestful_Model_Api2_Product extends Clockworkgeek_Extrar
             if ($product->getData($code.'_value')) {
                 $product->setData($code, $product->getData($code.'_value'));
             }
-            elseif ($attribute->usesSource() && $attribute->getIsVisibleOnFront()) {
+            elseif ($attribute->usesSource()) {
                 $product->setData($code, $product->getAttributeText($code));
             }
         }
